@@ -1,0 +1,62 @@
+@font-face {
+  font-family: marval;
+  src: url(LeanForeword-MR0x.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "marval";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+html section,
+body section {
+  flex: 1;
+  background-color: red;
+  transition: 0.4s ease;
+  display: flex;
+  align-items: start;
+  padding-top: 5rem;
+  justify-content: center;
+}
+html section h1,
+body section h1 {
+  color: white;
+  font-size: 3rem;
+}
+html .img1,
+body .img1 {
+  background-image: url(Thor.jpeg);
+  background-size: cover;
+}
+html .img2,
+body .img2 {
+  background-image: url(spiderman.jpg);
+  background-size: cover;
+}
+html .img3,
+body .img3 {
+  background-image: url(loki.jpg);
+  background-size: cover;
+}
+html .img4,
+body .img4 {
+  background-image: url(black.jpg);
+  background-size: cover;
+}
+html .img5,
+body .img5 {
+  background-image: url(hulk.jpg);
+  background-size: cover;
+}
+html section:hover,
+body section:hover {
+  flex-grow: 2;
+}/*# sourceMappingURL=style.css.map */
