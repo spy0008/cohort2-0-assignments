@@ -1,0 +1,87 @@
+@font-face {
+  font-family: car;
+  src: url(LeanForeword-MR0x.ttf);
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "car";
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "left1 middle right1"
+    "left2 middle right2";
+  gap: 2px;
+  overflow: hidden;
+
+  div {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    border: 2px solid gray;
+    width: 100%;
+    height: 100%;
+
+    h1 {
+      color: white;
+      font-size: 3rem;
+      font-weight: 600;
+      text-shadow: 2px 2px black;
+      opacity: 0;
+      transition: 0.5s ease-in;
+    }
+  }
+
+  div:hover {
+    h1 {
+      opacity: 1;
+    }
+  }
+
+  .part1 {
+    grid-area: left1;
+    background-image: url(img3.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  .part2 {
+    grid-area: left2;
+    background-image: url(img4.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .part3 {
+    grid-area: middle;
+    background-image: url(img5.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .part4 {
+    grid-area: right1;
+    background-image: url(img2.jpg);
+    background-size: cover;
+  }
+  .part5 {
+    grid-area: right2;
+    background-image: url(img1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .part1:hover div {
+    bottom: 0;
+  }
+}
