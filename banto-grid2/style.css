@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.box{
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+
+.main-container{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 25% 25%;
+    grid-template-rows: 200px 200px 200px;
+    gap: 0.5rem;
+    grid-template-areas: 
+        "box1 box6 box2"
+        "box1 box4 box2"
+        "box3 box4 box5"
+    ;
+}
+
