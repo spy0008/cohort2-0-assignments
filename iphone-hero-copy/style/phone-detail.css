@@ -1,0 +1,56 @@
+.phone-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.name-info {
+  position: absolute;
+  left: 5rem;
+  line-height: 3rem;
+  bottom: 0.2rem;
+}
+
+.name-info > h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.name-info > span {
+  font-size: 4rem;
+  font-weight: 700;
+  background: #a679c9;
+  background-image: linear-gradient(to right, #a679c9 0%, #6b9293 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.buy-link {
+  position: absolute;
+  right: 7rem;
+  bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  background-color: #f2f3f7;
+  line-height: 15px;
+  width: 355px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  padding-right: 10px;
+}
+
+.buy-link > h3 {
+  font-weight: 500;
+}
+
+.buy-link > button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0171e2;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}

@@ -1,0 +1,11 @@
+.main-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.main-img>img{
+    height: 500px;
+    width: 600px;
+}

@@ -1,0 +1,29 @@
+nav{
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 1.4rem;
+    justify-content: space-evenly;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-links>h3{
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #615f5f;
+
+}
+
+.search-cart{
+    display: flex;
+    align-content: center;
+    gap: 40px;
+}
+
+
