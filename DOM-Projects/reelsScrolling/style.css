@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(61, 61, 61), black);
+  padding: 15px;
+}
+
+.main {
+  width: 320px;
+  height: 100%;
+  margin: auto;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.reels-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.reel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.reel img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 30px;
+  gap: 10px;
+  left: 20px;
+}
+.info .top {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.info .top img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.info .top h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+.info .top button {
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: 500;
+  color: white;
+}
+.info .bottom h4 {
+  color: white;
+}
+
+.tools {
+  position: absolute;
+  display: flex;
+  bottom: 18%;
+  gap: 22px;
+  right: 10px;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.tools i {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.tools .icons {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  gap: 4px;
+}
