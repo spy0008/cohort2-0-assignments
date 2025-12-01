@@ -65,14 +65,25 @@ html{
     color: whitesmoke;
     display: flex;
     flex-direction: column;
+    border: 0px solid rgba(255, 255, 255, 0);
     gap: 10px;
-    box-shadow: 0 0 60px red;
+    transition: 0.3s all linear;
     border-radius: 15px;
     background:  
     linear-gradient(black) padding-box,
     conic-gradient(from var(--Deg), black,black,black,black, red,black) border-box;
     border: 5px solid rgba(255, 255, 255, 0);
-    animation: circle 8s infinite;
+    animation: circle 5s infinite linear;
+    animation-play-state: paused;
+    color: white;
+}
+
+.box:hover{
+    animation-play-state: running;
+    box-shadow: 0 0 60px red;
+    border-width: 10px;
+    color: red;
+    text-shadow: 0 0 12px red;
 }
 
 .box img{
