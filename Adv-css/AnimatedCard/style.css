@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* @keyframes changeBg{
+    from{
+        background-color: white;
+        border-radius: 0px;
+        box-shadow: 0px 0px 50px red;
+        scale: 1;
+    }
+
+    to{
+        background-color: white;
+        border-radius: 50px;
+        scale: 0.6;
+        box-shadow: inset 0px 0px 40px green;
+
+    }
+} */
+
+@property --Deg{
+    syntax: "<angle>";
+    initial-value: 0deg ;
+    inherits: false ;
+}
+/* 
+:root{
+    --BgColor:red;
+} */
+
+@keyframes circle{
+    from{
+        --Deg: 0deg;
+    }
+
+    to{
+        --Deg: 360deg;
+    }
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.box{
+    max-width: 300px;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 60px red;
+    border-radius: 15px;
+    background:  
+    linear-gradient(black) padding-box,
+    conic-gradient(from var(--Deg), black,black,black,black, red,black) border-box;
+    border: 5px solid rgba(255, 255, 255, 0);
+    animation: circle 8s infinite;
+}
+
+.box img{
+    width: 100%;
+}
