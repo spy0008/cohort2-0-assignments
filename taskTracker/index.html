@@ -10,27 +10,23 @@
     <main>
         <nav>
             <h1 class="left">Tracker</h1>
-            <button class="right">Add New </button>
+            <button id="toggle-modal" class="right">Add New </button>
         </nav>
         <section class="board">
-            <div class="task-colume">
+            <div id="todo" class="task-colume">
                 <div class="heading">
                     <div class="left">To Do</div>
                     <div class="right">count</div>
                 </div>
-                <div class="task-card">
-                    <h2>Task 1</h2>
-                    <p>Description of task</p>
-                    <button>Delete</button>
-                </div>
+               
             </div>
-            <div class="task-colume">
+            <div id="progress" class="task-colume">
                 <div class="heading">
                     <div class="left">In Proccess</div>
                     <div class="right">count</div>
                 </div>
             </div>
-            <div class="task-colume">
+            <div id="complete" class="task-colume">
                 <div class="heading">
                     <div class="left">Completed</div>
                     <div class="right">count</div>
@@ -38,5 +34,16 @@
             </div>
         </section>
     </main>
+
+    <div class="modal add-task">
+        <div class="bg"></div>
+        <div class="center">
+            <input id="task-title" type="text" placeholder="Task Title">
+            <textarea id="task-desc" placeholder="Task Description"></textarea>
+            <button id="add-new-task">Add Task</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
