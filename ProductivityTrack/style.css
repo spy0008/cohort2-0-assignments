@@ -1,0 +1,126 @@
+@font-face {
+  font-family: Regular;
+  src: url(SourceCodePro-Regular.ttf);
+}
+
+@font-face {
+  font-family: light;
+  src: url(./SourceCodePro-Light.ttf);
+}
+
+@font-face {
+  font-family: bold;
+  src: url(./SourceCodePro-Bold.ttf);
+}
+
+@font-face {
+  font-family: semibold;
+  src: url(./SourceCodePro-Semibold.ttf);
+}
+
+@font-face {
+  font-family: medium;
+  src: url(./SourceCodePro-Medium.ttf);
+}
+
+:root {
+  --pri: #6b5a47;
+  --sec: #B77466;
+  --tri1: #FFE1AF;
+  --tri2: #E2B59A;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Regular;
+  color: var(--tri1);
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  background-color: var(--sec);
+}
+
+section.allElm{
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    position: absolute;
+}
+
+.elem{
+    background-color: var(--pri);
+    height: 300px;
+    width: 220px;
+    font-size: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.727);
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.elem h2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: bold;
+}
+
+.elem:active{
+    scale: 0.9;
+}
+
+.fullElem{
+    width: 100%;
+    height: 100%;
+    background-color: var(--pri);
+    padding: 20px;
+    font-size: 20px;
+    display: none;
+    position: absolute;
+}
+
+.back{
+    position: absolute;
+    right: 15px;
+    background-color: rgba(255, 0, 0, 0.265);
+    outline: none;
+    border: none;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+
+.back:active{
+    scale: 0.7;
+}
