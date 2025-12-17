@@ -6,9 +6,9 @@
     <title>Productivity Tracker - 09</title>
     <link rel="stylesheet" href="style.css" />
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="main">
@@ -54,33 +54,59 @@
         </div>
       </section>
 
-      <section class="fullElem">
+      <section class="fullElem todo-list-fullpage">
         <button class="back" id="0">
-            <i class="ri-close-fill"></i>
+          <i class="ri-close-fill"></i>
         </button>
-        <h1>Todo Page</h1>
+        <h2>Your Personalised To-Do List</h2>
+
+        <div class="todo-container">
+          <div class="addTask">
+            <form>
+              <h3>Add Task</h3>
+              <input id="task-input" type="text" placeholder="Enter Task" />
+              <textarea
+                name=""
+                cols="30"
+                rows="10"
+                placeholder="Enter Task Details"
+              ></textarea>
+
+              <div class="mark-imp">
+                <input type="checkbox" name="" id="check">
+                <label for="check">Mark as Important</label>
+              </div>
+
+              <button>Add Task</button>
+            </form>
+          </div>
+          <div class="allTasks">
+         
+          </div>
+        </div>
       </section>
-      <section class="fullElem">
+
+      <section class="fullElem daily-planner-fullpage">
         <button class="back" id="1">
-            <i class="ri-close-fill"></i>
+          <i class="ri-close-fill"></i>
         </button>
         <h1>Daily Page</h1>
       </section>
-      <section class="fullElem">
+      <section class="fullElem motivation-fullpage">
         <button class="back" id="2">
-            <i class="ri-close-fill"></i>
+          <i class="ri-close-fill"></i>
         </button>
         <h1>Motivation Page</h1>
       </section>
-      <section class="fullElem">
+      <section class="fullElem pomodoro-fullpage">
         <button class="back" id="3">
-            <i class="ri-close-fill"></i>
+          <i class="ri-close-fill"></i>
         </button>
         <h1>pomodoro Page</h1>
       </section>
-      <section class="fullElem">
+      <section class="fullElem goals-fullpage">
         <button class="back" id="4">
-            <i class="ri-close-fill"></i>
+          <i class="ri-close-fill"></i>
         </button>
         <h1>Goals Page</h1>
       </section>
