@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productivity Tracker - 09</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/todo-styles.css" />
+    <link rel="stylesheet" href="./styles/daily-planner.css" />
+    <link rel="stylesheet" href="./styles/motivation.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -73,16 +75,14 @@
               ></textarea>
 
               <div class="mark-imp">
-                <input type="checkbox" name="" id="check">
+                <input type="checkbox" name="" id="check" />
                 <label for="check">Mark as Important</label>
               </div>
 
               <button>Add Task</button>
             </form>
           </div>
-          <div class="allTasks">
-         
-          </div>
+          <div class="allTasks"></div>
         </div>
       </section>
 
@@ -90,20 +90,46 @@
         <button class="back" id="1">
           <i class="ri-close-fill"></i>
         </button>
-        <h1>Daily Page</h1>
+        <h1>Plane your day to be more productive</h1>
+
+        <div class="day-planner">
+        
+        </div>
       </section>
+
       <section class="fullElem motivation-fullpage">
         <button class="back" id="2">
           <i class="ri-close-fill"></i>
         </button>
-        <h1>Motivation Page</h1>
+
+        <div class="motivational-container">
+          <div class="motivation-wrapper">
+            <div class="motivation-1">
+              <h2>Quote of the day</h2>
+            </div>
+            <div class="motivation-2">
+              <h1>
+              </h1>
+            </div>
+
+              <div class="motivation-3">
+              <h2></h2>
+            </div>
+          </div>
+        </div>
       </section>
+
+
+
       <section class="fullElem pomodoro-fullpage">
         <button class="back" id="3">
           <i class="ri-close-fill"></i>
         </button>
         <h1>pomodoro Page</h1>
       </section>
+
+
+
       <section class="fullElem goals-fullpage">
         <button class="back" id="4">
           <i class="ri-close-fill"></i>

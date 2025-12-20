@@ -20,6 +20,7 @@ function openFeatures() {
 
 openFeatures();
 
+//todo logic start
 let form = document.querySelector(".addTask form");
 let inputData = document.querySelector(".addTask form #task-input");
 let textareaData = document.querySelector(".addTask form textarea");
@@ -47,6 +48,18 @@ function renderTask() {
   });
 
   allTask.innerHTML = sum;
+
+  let markedTask = document.querySelectorAll(".task button");
+
+  markedTask.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.id;
+
+      allCurrentTasks.splice(id, 1);
+
+      renderTask();
+    });
+  });
 }
 
 renderTask();
@@ -67,20 +80,70 @@ form.addEventListener("submit", function (e) {
   checkbox.checked = false;
 
   renderTask();
-
-  location.reload();
 });
+//todo logic ends
 
-let markedTask = document.querySelectorAll(".task button");
+//daily planner logic
 
-markedTask.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const id = btn.id;
+function dailyPlanner() {
+  let dailyUi = "";
 
-    allCurrentTasks.splice(id, 1);
+  let dayPlanData = JSON.parse(localStorage.getItem("dayPlanner")) || {};
 
-    renderTask();
+  let dayPlanner = document.querySelector(".day-planner");
 
-    location.reload();
+  let hours = Array.from({ length: 18 }, function (el, idx) {
+    return `${6 + idx}:00 - ${7 + idx}:00`;
   });
-});
+
+  hours.forEach(function (elem, idx) {
+    let savedData = dayPlanData[idx] || "";
+    dailyUi += `  <div class="day-planner-time">
+            <p>${elem}</p>
+            <input id=${idx} type="text" placeholder="..."  value=${savedData}>
+          </div>`;
+  });
+
+  dayPlanner.innerHTML = dailyUi;
+
+  let dayPlannerInput = document.querySelectorAll(".day-planner input");
+
+  dayPlannerInput.forEach(function (elem) {
+    elem.addEventListener("input", function () {
+      dayPlanData[elem.id] = elem.value;
+      localStorage.setItem("dayPlanner", JSON.stringify(dayPlanData));
+    });
+  });
+}
+
+dailyPlanner();
+
+//daily planner logic end
+
+
+
+//motivation page logic start
+
+function motivation(){
+  let content = document.querySelector(".motivation-2 h1");
+  let authorName = document.querySelector(".motivation-3 h2");
+  
+  async function fetchQuotes() {
+    try {
+      let res = await fetch("https://api.quotable.io/random");
+      let result = await res.json();
+  
+      content.innerHTML = result.content;
+      authorName.innerHTML = "- " + result.author;
+    } catch (error) {
+      console.log("Error in motivation fetch: ", error);
+    }
+  }
+  
+  fetchQuotes();
+
+}
+
+motivation()
+
+//motivation logic end
