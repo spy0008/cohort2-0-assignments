@@ -41,29 +41,131 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 #main {
   width: 100%;
   height: 100%;
+  padding-top: 90px;
   background-color: var(--sec);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 35px;
+  padding: 30px 40px;
+}
+
+.nav-in {
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  background-color: var(--tri2);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.nav-in h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.theme {
+  background-color: var(--pri);
+  padding: 12px 20px;
+  border-radius: 10px;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+.theme h4 {
+  color: var(--sec);
+  font-weight: 700;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.theme:active {
+  scale: 0.96;
+}
+
+.allElm header {
+  width: 100%;
+  background-image: url(https://images.unsplash.com/photo-1717361279773-b2e7ee713d2e?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 35px 50px;
+}
+
+header .header1 h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+header .header1 h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+header .header1 h4 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+header .header2 h2 {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+header .header2 h4 {
+  font-weight: 500;
+  margin-top: -10px;
+  margin-bottom: 45px;
+  font-size: 20px;
+}
+
+header .header2 h3 {
+  font-weight: 500;
+  font-size: 10px;
+  opacity: 0.8;
 }
 
 section.allElm {
   height: 100%;
   width: 100%;
   padding: 40px;
-  padding-top: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 40px;
+  overflow: auto;
   position: absolute;
 }
-
 .elem {
   background-color: var(--pri);
-  height: 300px;
+  height: 280px;
   width: 220px;
   font-size: 20px;
   border-radius: 20px;
@@ -72,6 +174,19 @@ section.allElm {
   transition: all ease 0.3s;
   cursor: pointer;
   box-shadow: -5px 5px 2px rgba(0, 0, 0, 0.727);
+}
+
+.allElm .allFeatures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .elem img {
@@ -93,12 +208,14 @@ section.allElm {
 }
 
 .fullElem {
-  width: 100%;
   height: 100%;
+  width: 100%;
   background-color: var(--pri);
   padding: 20px;
   display: none;
   position: absolute;
+  top: 0;
+  z-index: 999;
 }
 
 .back {
@@ -122,7 +239,6 @@ section.allElm {
 .back:active {
   scale: 0.7;
 }
-
 
 .todo-list-fullpage h2 {
   font-size: 30px;
@@ -224,38 +340,38 @@ section.allElm {
   margin-bottom: 10px;
 }
 
-.task h5{
-    color: rgb(117, 117, 117);
-    font-weight: 600;
-    font-size: 15px;
+.task h5 {
+  color: rgb(117, 117, 117);
+  font-weight: 600;
+  font-size: 15px;
 }
 
-.task h5 span.true{
-    color: white;
-    margin-left: 5px;
-    padding: 2px 5px;
-    border-radius: 10px;
-    font-weight: 600;
-    background-color: rgb(232, 83, 83);
-    font-size: 10px;
+.task h5 span.true {
+  color: white;
+  margin-left: 5px;
+  padding: 2px 5px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: rgb(232, 83, 83);
+  font-size: 10px;
 }
 
-.task button{
-    padding: 12px 15px;
-    background-color: #b77466;
-    color:rgb(45, 45, 45);
-    font-weight: 600;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    transition: all ease 0.3s;
+.task button {
+  padding: 12px 15px;
+  background-color: #b77466;
+  color: rgb(45, 45, 45);
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: all ease 0.3s;
 }
 
-.task button:active{
+.task button:active {
   scale: 0.7;
 }
 
-.mark-imp{
+.mark-imp {
   display: flex;
   align-items: center;
   justify-content: flex-start;
